@@ -1,0 +1,54 @@
+.sidebar {
+  position: absolute;
+  top: 60px;
+  left: -250px;
+  height: calc(100% - 60px);
+  width: 250px;
+  padding: 20px 14px;
+  background-color: white;
+  transition: left 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 1201px) {
+    left: 0;
+  }
+
+  &.active {
+    left: 0;
+  }
+
+  .sidebar-user {
+    margin: 20px 0;
+
+
+    .avatar-container {
+      height: 60px;
+      width: 60px;
+      margin: 0 auto;
+
+      .avatar {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .sidebar-user-info {
+      text-align: center;
+      margin-top: 6px;
+
+      .name {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .email {
+        font-size: 0.825rem;
+      }
+    }
+  }
+
+  .sidebar-menu {
+    flex-grow: 1;
+  }
+}

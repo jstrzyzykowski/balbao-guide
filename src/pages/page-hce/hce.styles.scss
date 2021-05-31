@@ -1,0 +1,9 @@
+.hce {
+  height: 100%;
+  padding: 20px 10px 10px;
+  transition: padding-left 0.3s;
+
+  @media screen and (min-width: 1201px) {
+    padding-left: 270px;
+  }
+}

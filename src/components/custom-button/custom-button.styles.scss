@@ -1,0 +1,19 @@
+.custom-button {
+  border: none;
+  padding: 12px 36px;
+  border-radius: 8px;
+  color: white;
+
+  &.fluid {
+    width: 100%;
+    // border-radius: 14px;
+  }
+
+  &.primary {
+    background-color: #615DFA;
+  }
+
+  &.secondary {
+    background-color: #2BECFE;
+  }
+}

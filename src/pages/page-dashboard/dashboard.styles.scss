@@ -1,0 +1,30 @@
+.dashboard {
+  height: 100%;
+  padding: 20px 10px 10px;
+  transition: padding-left 0.3s;
+
+  @media screen and (min-width: 1201px) {
+    padding-left: 270px;
+  }
+
+  .dashboard-text {
+    margin-top: 30vh;
+    text-align: center;
+    color: rgb(202, 202, 202);
+
+    .title {
+      font-family: 'Bungee', cursive;
+      font-size: 3rem;
+      line-height: 3rem;
+      letter-spacing: -1px;
+    }
+
+    .description {
+      margin-top: 8px;
+      letter-spacing: 2px;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}

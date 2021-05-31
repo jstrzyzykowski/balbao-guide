@@ -1,0 +1,29 @@
+.sidebar-item {
+  list-style: none;
+  margin: 10px 0;
+
+  .sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 12px;
+    color: #3E3F5E;
+    box-shadow:rgba(62, 63, 94, .1) 1px 3px 8px 0;
+
+    &.active {
+      background-color: #23D2E2;
+      color: white;
+      box-shadow: rgba(35,210,226,.2) 1px 3px 8px 0;
+    }
+
+    i {
+      font-size: 1.4rem;
+      margin-right: 10px;
+    }
+
+    .sidebar-item-text {
+      font-size: 0.825rem;
+    }
+  }
+
+}
