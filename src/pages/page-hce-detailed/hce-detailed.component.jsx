@@ -2,6 +2,7 @@ import React from 'react';
 
 import HceDetailedHeader from '../../components/hce-detailed-header/hce-detailed-header.component';
 import HceDetailedMap from '../../components/hce-detailed-map/hce-detailed-map.component';
+import SectionTitle from '../../components/section-title/section-title.component';
 
 import './hce-detailed.styles.scss';
 
@@ -12,7 +13,9 @@ export default function HceDetailedPage({match}) {
   return (
     <div className='hce-detailed'>
       <HceDetailedHeader uniqueName={uniqueName}/>
+      <SectionTitle content='Map'/>
       <HceDetailedMap/>
+      <SectionTitle content='Enemies'/>
     </div>
   );
 }
