@@ -1,0 +1,10 @@
+.hce-detailed {
+  padding: 10px;
+  min-height: calc(100vh - 60px);
+  // background-color: yellowgreen;
+  transition: padding-left 0.3s;
+
+  @media screen and (min-width: 1201px) {
+    padding-left: 270px;
+  }
+}
