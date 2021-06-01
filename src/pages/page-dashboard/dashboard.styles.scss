@@ -1,5 +1,4 @@
 .dashboard {
-  height: 100%;
   padding: 20px 10px 10px;
   transition: padding-left 0.3s;
 
@@ -23,7 +22,7 @@
       margin-top: 8px;
       letter-spacing: 2px;
       span {
-        font-weight: bold;
+        font-weight: 900;
       }
     }
   }

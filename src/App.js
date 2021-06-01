@@ -4,6 +4,7 @@ import {Route, Switch} from 'react-router-dom';
 import Header from './components/header/header.component';
 import DashboardPage from './pages/page-dashboard/dashboard.component';
 import HcePage from './pages/page-hce/hce.component';
+import HceDetailedPage from './pages/page-hce-detailed/hce-detailed.component';
 
 import './App.css';
 
@@ -14,7 +15,8 @@ function App() {
       <div className='page-container'>
         <Switch>
           <Route exact path='/' component={DashboardPage}/>
-          <Route path='/hce' component={HcePage}/>
+          <Route exact path='/hce' component={HcePage}/>
+          <Route path='/hce/:uniqueName' component={HceDetailedPage}/>
         </Switch>
       </div>
     </>
