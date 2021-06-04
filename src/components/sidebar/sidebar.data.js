@@ -3,7 +3,7 @@ export const sidebarData = [
     id: '1',
     title: 'Home',
     icon: 'fas fa-home',
-    linkUrl: '/',
+    linkUrl: '/dashboard',
   },
   {
     id: '2',

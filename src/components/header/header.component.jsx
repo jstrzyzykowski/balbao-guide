@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <div className='header'>
       <div className="header-container">
-        <Link className='logo' to='/'>
+        <Link className='logo' to='/dashboard'>
           Balbao
         </Link>
         <div className='header-mobile-button' onClick={() => setIsSidebarActive((prevValue) => !prevValue)}>

@@ -1,7 +1,10 @@
 import { SET_CURRENT_USER } from "./user.types";
 
 const initialState = {
-  currentUser: null,
+  currentUser: {
+		email: 'erambo@gmail.com',
+		displayName: 'John Rambo'
+	},
 };
 
 export default function userReducer(state = initialState, {type, payload}) {
