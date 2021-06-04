@@ -1,18 +1,21 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-import {expeditionsData} from '../../api/expeditionsData';
 import HceItem from '../hce-item/hce-item.component';
 
 import './hce-list.styles.scss';
 
 export default function HceList() {
+
+  const {expeditions} = useSelector((state) => state.expedition);
+
   return (
     <div className='hce-list'>
       <div className='hce-list-header'>
         <h2>Expeditions</h2>
-        <p>Result: {expeditionsData.length}</p>
+        <p>Result: {expeditions.length}</p>
       </div>
-      {expeditionsData.map((expedition) => <HceItem key={expedition.id} data={expedition}/>)}
+      {expeditions.map((expedition) => <HceItem key={expedition.id} expeditionData={expedition}/>)}
     </div>
   );
 }

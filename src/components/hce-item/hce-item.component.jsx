@@ -5,11 +5,11 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import './hce-item.styles.scss';
 
-export default function HceItem({data}) {
+export default function HceItem({expeditionData}) {
 
   const history = useHistory();
   const match = useRouteMatch();
-  const {title, difficulty, uniqueName} = data;
+  const {title, difficulty, uniqueName} = expeditionData;
 
   return (
     <div className='hce-item'>

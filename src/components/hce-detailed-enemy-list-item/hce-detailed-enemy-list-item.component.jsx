@@ -15,14 +15,13 @@ export default function HceDetailedEnemyListItem({enemyData}) {
       </div>
       <div className='enemy-text-container'>
         <h2 className='enemy-name'>{name}</h2>
-        <span className={`${difficulty === 'easy' ? difficulty : ''} ${difficulty === 'normal' ? 'normal' : ''} ${difficulty === 'dangerous' ? 'dangerous' : ''} enemy-difficulty`}>{difficulty}</span>
+        <span className={`${difficulty} enemy-difficulty`}>{difficulty}</span>
       </div>
-      {type === 'boss' ? (<div className='enemy-type boss'>
-        <i class="fas fa-crown"></i>
-      </div>) : null}
-      {type === 'miniboss' ? (<div className='enemy-type miniboss'>
-        <i class="fas fa-skull"></i>
-      </div>) : null}
+      {type ? (
+        <div className={`${type.name} enemy-type`}>
+          <i class={`fas ${type.icon}`}></i>
+        </div>
+      ) : null}
     </div>
   );
 }
