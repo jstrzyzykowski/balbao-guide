@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import CustomButton from '../custom-button/custom-button.component';
 import FormSignIn from '../form-sign-in/form-sign-in.component';
 import FormSignUp from '../form-sign-up/form-sign-up.component';
 

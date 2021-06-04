@@ -13,7 +13,7 @@ export default function HceDetailedHeader({uniqueName}) {
   return (
     <div className="detailed-header">
       <CustomButton iconButton='true' onClick={() => {history.push('/hce')}}>
-      <i class="fas fa-backward"></i>
+      <i className="fas fa-backward"></i>
       </CustomButton>
       <div className="header-image-container">
         <img src={Image} alt="" />
@@ -23,7 +23,7 @@ export default function HceDetailedHeader({uniqueName}) {
         <div className='text-container'>
           <span className='monster-type'>Morgana</span>
           <p className="difficulty">
-            <i class="fas fa-skull"></i>
+            <i className="fas fa-skull"></i>
             <span>4/5</span>
           </p>
         </div>

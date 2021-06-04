@@ -1,18 +1,42 @@
-import React from 'react';
-import {Redirect, Route, Switch} from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import React, {useEffect} from 'react';
+import {Redirect, Route} from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 import LandingPage from './pages/page-landing/landing.component';
 import Header from './components/header/header.component';
 import DashboardPage from './pages/page-dashboard/dashboard.component';
 import HcePage from './pages/page-hce/hce.component';
 import HceDetailedPage from './pages/page-hce-detailed/hce-detailed.component';
+import {auth, createUserProfileDocument} from './firebase/firebase.utils';
+import { setCurrentUser } from './redux/user/user.actions';
 
 import './App.css';
 
 function App() {
 
   const {currentUser} = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
+      if(userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+
+        userRef.onSnapshot((snapshot) => {
+          dispatch(setCurrentUser({
+            id: snapshot.id,
+            ...snapshot.data(),
+          }));
+        });
+      } else {
+        dispatch(setCurrentUser(userAuth));
+      }
+
+      return () => {
+        unsubscribeFromAuth();
+      };
+    })
+  }, [dispatch]);
 
   return (
     <>

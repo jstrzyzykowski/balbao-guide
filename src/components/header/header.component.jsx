@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Sidebar from '../sidebar/sidebar.component';
 
@@ -16,7 +16,7 @@ export default function Header() {
           Balbao
         </Link>
         <div className='header-mobile-button' onClick={() => setIsSidebarActive((prevValue) => !prevValue)}>
-          {isSidebarActive ? <i class="fas fa-times"></i> : <i class="fas fa-bars"></i>}
+          {isSidebarActive ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}
         </div>
         <Sidebar isActive={isSidebarActive} setIsSidebarActive={setIsSidebarActive}/>
       </div>

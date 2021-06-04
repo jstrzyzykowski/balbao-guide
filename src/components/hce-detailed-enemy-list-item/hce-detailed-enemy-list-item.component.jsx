@@ -6,7 +6,7 @@ import './hce-detailed-enemy-list-item.styles.scss';
 
 export default function HceDetailedEnemyListItem({enemyData}) {
   
-  const {name, uniqueName, difficulty, type} = enemyData;
+  const {name, difficulty, type} = enemyData;
   
   return (
     <div className='enemy-list-item'>
@@ -19,7 +19,7 @@ export default function HceDetailedEnemyListItem({enemyData}) {
       </div>
       {type ? (
         <div className={`${type.name} enemy-type`}>
-          <i class={`fas ${type.icon}`}></i>
+          <i className={`fas ${type.icon}`}></i>
         </div>
       ) : null}
     </div>

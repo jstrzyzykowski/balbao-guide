@@ -5,13 +5,13 @@ import {setCurrentUser} from '../../redux/user/user.actions';
 
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
+import {signInWithGoogle} from '../../firebase/firebase.utils';
 
 import './form-sign-in.styles.scss';
 
 export default function FormSignIn() {
-
+  
   const dispatch = useDispatch();
-
   const [signInData, setSignInData] = useState({
     loginEmail: '',
     loginPassword: '',
@@ -28,12 +28,10 @@ export default function FormSignIn() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const user = {
       email: signInData.loginEmail,
       password: signInData.loginPassword,
     }
-
     dispatch(setCurrentUser(user));
   }
 
@@ -45,7 +43,7 @@ export default function FormSignIn() {
         <FormInput name='loginPassword' value={signInData.loginPassword} handleChange={handleChange} type='password' required label='Password'/>
         <div className='buttons'>
           <CustomButton content='Login to your Account!' type='submit' fluid/>
-          <CustomButton content='Sign in with Google' type='button' fluid color='secondary'/>
+          <CustomButton onClick={signInWithGoogle} content='Sign in with Google' type='button' fluid color='secondary'/>
         </div>
       </form>
     </div>

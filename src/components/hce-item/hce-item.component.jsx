@@ -19,12 +19,12 @@ export default function HceItem({expeditionData}) {
       <div className='hce-item-header'>
         <h2 className='title'>{title}</h2>
         <p className='difficulty'>
-          <i class="fas fa-skull"></i>
+          <i className="fas fa-skull"></i>
           <span>{difficulty}/5</span>
         </p>
       </div>
       <CustomButton onClick={() => history.push(`${match.path}/${uniqueName}`)}>
-        <i class="fas fa-book"></i>
+        <i className="fas fa-book"></i>
       </CustomButton>
     </div>
   );
