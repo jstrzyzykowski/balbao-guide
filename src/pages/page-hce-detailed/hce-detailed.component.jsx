@@ -1,4 +1,5 @@
 import React from 'react';
+import HceDetailedEnemyList from '../../components/hce-detailed-enemy-list/hce-detailed-enemy-list.component';
 
 import HceDetailedHeader from '../../components/hce-detailed-header/hce-detailed-header.component';
 import HceDetailedMap from '../../components/hce-detailed-map/hce-detailed-map.component';
@@ -16,6 +17,7 @@ export default function HceDetailedPage({match}) {
       <SectionTitle content='Map'/>
       <HceDetailedMap/>
       <SectionTitle content='Enemies'/>
+      <HceDetailedEnemyList hceUniqueName={uniqueName}/>
     </div>
   );
 }

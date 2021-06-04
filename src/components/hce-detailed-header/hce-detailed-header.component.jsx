@@ -21,7 +21,7 @@ export default function HceDetailedHeader({uniqueName}) {
       <div className="header-text">
         <h2 className="text-title">Preaching to the Death</h2>
         <div className='text-container'>
-          <p className='monster-type'>Morgana</p>
+          <span className='monster-type'>Morgana</span>
           <p className="difficulty">
             <i class="fas fa-skull"></i>
             <span>4/5</span>

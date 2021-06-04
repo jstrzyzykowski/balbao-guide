@@ -5,7 +5,7 @@
   position: relative;
   // height: 176px;
   background-color: rgb(200, 200, 200);
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   box-shadow:rgba(62, 63, 94, .1) 1px 3px 8px 0;
 
@@ -30,8 +30,8 @@
 
   .header-text {
     background-color: white;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     padding: 10px;
 
     .text-title {
@@ -45,13 +45,13 @@
     .text-container {
       display: flex;
       width: 100%;
-      // justify-content: space-between;
+      justify-content: space-between;
       font-size: 0.9rem;
       align-items: center;
-      margin-top: 6px;
+      margin-top: 4px;
 
       .monster-type {
-        flex-grow: 1;
+        // flex-grow: 1;
         padding: 4px 8px;
         background-color: rgb(219, 219, 219);
         color: dimgray;

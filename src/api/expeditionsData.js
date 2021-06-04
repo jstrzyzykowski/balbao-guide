@@ -1,26 +1,53 @@
 export const expeditionsData = [
   {
     id: '1',
-    title: 'Stone Wars',
-    uniqueName: 'stone-wars',
-    difficulty: '2'
-  },
-  {
-    id: '2',
-    title: "In the Raven's Claws",
-    uniqueName: 'in-the-ravens-claws',
-    difficulty: '5'
-  },
-  {
-    id: '3',
-    title: "Fistful of Silver",
-    uniqueName: 'fistful-of-silver',
-    difficulty: '4'
-  },
-  {
-    id: '4',
-    title: "Preaching to the Death",
-    uniqueName: 'preaching-to-the-death',
-    difficulty: '4'
-  },
+    title: 'Lurking Underneath',
+    uniqueName: 'lurking-underneath',
+    difficulty: '3',
+    mobType: 'Undead',
+    enemies: [
+      {
+        id: '100',
+        name: 'Veteran Haunted Ghast',
+        uniqueName: 'veteran-haunted-ghast',
+        difficulty: 'normal',
+        type: 'boss'
+      },
+      {
+        id: '101',
+        name: 'Veteran Haunted Lacedon',
+        uniqueName: 'veteran-haunted-lacedon',
+        difficulty: 'normal',
+        type: 'miniboss'
+      },
+      {
+        id: '102',
+        name: 'Veteran Haunted Archer',
+        uniqueName: 'veteran-haunted-archer',
+        difficulty: 'normal',
+        type: 'normal'
+      },
+      {
+        id: '103',
+        name: 'Veteran Haunted Scorpion',
+        uniqueName: 'veteran-haunted-scorpion',
+        difficulty: 'dangerous',
+        type: 'normal'
+      },
+      {
+        id: '104',
+        name: 'Veteran Haunted Swordsman',
+        uniqueName: 'veteran-haunted-swordsman',
+        difficulty: 'easy',
+        type: 'normal'
+      },
+      {
+        id: '105',
+        name: 'Veteran Haunted Rotten Rat',
+        uniqueName: 'veteran-haunted-rotten-rat',
+        difficulty: 'easy',
+        type: 'normal'
+      }
+    ],
+  }
 ];

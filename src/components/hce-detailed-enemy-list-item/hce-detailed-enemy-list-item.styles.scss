@@ -1,0 +1,75 @@
+.enemy-list-item {
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow:rgba(62, 63, 94, .2) 1px 3px 8px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+
+  .enemy-image-container {
+    height: 80px;
+    width: 120px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      opacity: .9;
+    }
+  }
+
+  .enemy-text-container {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #2f2f2f;
+
+    .enemy-name {
+      font-size: 0.9rem;
+      line-height: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .enemy-difficulty {
+      font-size: 0.8rem;
+      padding: 2px 6px;
+      border-radius: 6px;
+      color: white;
+
+      &.easy {
+        background-color: #23D2E2;
+      }
+
+      &.normal {
+        background-color: #615DFA;
+      }
+
+      &.dangerous {
+        background-color: #3E3F5E;
+      }
+    }
+  }
+
+  .enemy-type {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    bottom: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 1rem;
+      color: white;
+    }
+  }
+}

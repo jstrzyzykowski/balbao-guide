@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MapImage from '../../assets/hce-map.png';
+import MapImage from '../../assets/hce-map-test.png';
 
 import './hce-detailed-map.styles.scss';
 
