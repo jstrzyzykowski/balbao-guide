@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Avatar from 'react-avatar';
 
 import {auth} from '../../firebase/firebase.utils';
 import {sidebarData} from './sidebar.data';
@@ -15,7 +16,7 @@ export default function Sidebar({isActive, setIsSidebarActive}) {
     <div className={`${isActive ? 'sidebar active' : 'sidebar'}`}>
       <div className='sidebar-user'>
         <div className='avatar-container'>
-          <img className='avatar' src={currentUser.photoURL} alt="User avatar"/>
+          <Avatar name={currentUser.displayName} size="60" round={true} />
         </div>
         <div className='sidebar-user-info'>
           <p className='name'>{currentUser.displayName}</p>

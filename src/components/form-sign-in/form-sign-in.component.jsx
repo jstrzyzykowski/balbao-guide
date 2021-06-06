@@ -1,17 +1,16 @@
 import React, {useState} from 'react'
+import {toast} from 'react-toastify';
 
 import {useDispatch} from 'react-redux';
-import {setCurrentUser} from '../../redux/user/user.actions';
 
 import CustomButton from '../custom-button/custom-button.component';
 import FormInput from '../form-input/form-input.component';
-import {signInWithGoogle} from '../../firebase/firebase.utils';
+import {auth, signInWithGoogle} from '../../firebase/firebase.utils';
 
 import './form-sign-in.styles.scss';
 
 export default function FormSignIn() {
   
-  const dispatch = useDispatch();
   const [signInData, setSignInData] = useState({
     loginEmail: '',
     loginPassword: '',
@@ -26,13 +25,21 @@ export default function FormSignIn() {
     });
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = {
-      email: signInData.loginEmail,
-      password: signInData.loginPassword,
+    
+    const {loginEmail, loginPassword} = signInData;
+
+    try {
+      await auth.signInWithEmailAndPassword(loginEmail, loginPassword);
+      setSignInData({
+        loginEmail: '',
+        loginPassword: '',
+      });
+      toast.success(`😃 Nice to see you!`);
+    } catch(error) {
+      toast.error("🤔 Invalid email or password");
     }
-    dispatch(setCurrentUser(user));
   }
 
   return (
