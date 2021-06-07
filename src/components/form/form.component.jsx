@@ -1,5 +1,8 @@
 import React from 'react'
 
+import {createStructuredSelector} from 'reselect';
+import {selectSignIn, selectSignUp} from '../../redux/landing-form/landing-form.selectors';
+
 import { useSelector, useDispatch } from 'react-redux';
 import {setSignInActive, setSignUpActive} from '../../redux/landing-form/landing-form.actions';
 
@@ -9,8 +12,7 @@ import FormSignUp from '../form-sign-up/form-sign-up.component';
 import './form.styles.scss';
 
 export default function Form() {
-  // Reimplement logic
-  const {signIn, signUp} = useSelector((state) => state.landingForm.formPages);
+  const {signIn, signUp} = useSelector(createStructuredSelector({signIn: selectSignIn, signUp: selectSignUp}));
   const dispatch = useDispatch();
 
   return (

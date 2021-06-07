@@ -1,4 +1,6 @@
 import React from 'react';
+import {createStructuredSelector} from 'reselect';
+import {selectExpeditions} from '../../redux/expedition/expedition.selectors';
 import { useSelector } from 'react-redux';
 
 import HceItem from '../hce-item/hce-item.component';
@@ -6,9 +8,8 @@ import HceItem from '../hce-item/hce-item.component';
 import './hce-list.styles.scss';
 
 export default function HceList() {
-
-  // Reselect: expeditions
-  const {expeditions} = useSelector((state) => state.expedition);
+  
+  const {expeditions} = useSelector(createStructuredSelector({expeditions: selectExpeditions}));
 
   return (
     <div className='hce-list'>

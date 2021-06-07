@@ -1,6 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Avatar from 'react-avatar';
+
+import { useSelector } from 'react-redux';
+import {createStructuredSelector} from 'reselect';
+import {selectCurrentUser} from '../../redux/user/user.selectors';
 
 import {auth} from '../../firebase/firebase.utils';
 import {sidebarData} from './sidebar.data';
@@ -11,8 +14,7 @@ import './sidebar.styles.scss';
 
 export default function Sidebar({isActive, setIsSidebarActive}) {
 
-  // Reselect: currentUser
-  const {currentUser} = useSelector((state) => state.user);
+  const {currentUser} = useSelector(createStructuredSelector({currentUser: selectCurrentUser}));
 
   return (
     <div className={`${isActive ? 'sidebar active' : 'sidebar'}`}>
