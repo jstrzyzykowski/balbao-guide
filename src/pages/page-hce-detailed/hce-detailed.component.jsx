@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import HceDetailedEnemyList from '../../components/hce-detailed-enemy-list/hce-detailed-enemy-list.component';
 
 import HceDetailedHeader from '../../components/hce-detailed-header/hce-detailed-header.component';
@@ -9,15 +10,17 @@ import './hce-detailed.styles.scss';
 
 export default function HceDetailedPage({match}) {
   
-  const {uniqueName} = match.params;
+  const {expeditions} = useSelector((state) => state.expedition);
+
+  const searchedExpedition = expeditions.find((expedition) => expedition.uniqueName === match.params.uniqueName); 
 
   return (
     <div className='hce-detailed'>
-      <HceDetailedHeader uniqueName={uniqueName}/>
+      <HceDetailedHeader expedition={searchedExpedition}/>
       <SectionTitle content='Map'/>
       <HceDetailedMap/>
       <SectionTitle content='Enemies'/>
-      <HceDetailedEnemyList hceUniqueName={uniqueName}/>
+      <HceDetailedEnemyList expedition={searchedExpedition}/>
     </div>
   );
 }

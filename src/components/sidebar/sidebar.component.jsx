@@ -10,6 +10,8 @@ import CustomButton from '../custom-button/custom-button.component';
 import './sidebar.styles.scss';
 
 export default function Sidebar({isActive, setIsSidebarActive}) {
+
+  // Reselect: currentUser
   const {currentUser} = useSelector((state) => state.user);
 
   return (

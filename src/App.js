@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
+  // Reselect: currentUser
   const {currentUser} = useSelector((state) => state.user);
   const dispatch = useDispatch();
 

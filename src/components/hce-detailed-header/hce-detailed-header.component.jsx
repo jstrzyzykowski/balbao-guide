@@ -6,9 +6,12 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import './hce-detailed-header.styles.scss';
 
-export default function HceDetailedHeader({uniqueName}) {
-
+export default function HceDetailedHeader({expedition}) {
+  
   const history = useHistory();
+  const {title, difficulty, mobType} = expedition;
+  
+  const MAX_DIFFICULTY = 5;
 
   return (
     <div className="detailed-header">
@@ -19,12 +22,12 @@ export default function HceDetailedHeader({uniqueName}) {
         <img src={Image} alt="" />
       </div>
       <div className="header-text">
-        <h2 className="text-title">Preaching to the Death</h2>
+        <h2 className="text-title">{title}</h2>
         <div className='text-container'>
-          <span className='monster-type'>Morgana</span>
+          <span className='monster-type'>{mobType}</span>
           <p className="difficulty">
             <i className="fas fa-skull"></i>
-            <span>4/5</span>
+            <span>{difficulty}/{MAX_DIFFICULTY}</span>
           </p>
         </div>
       </div>

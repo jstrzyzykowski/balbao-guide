@@ -7,6 +7,7 @@ import './hce-list.styles.scss';
 
 export default function HceList() {
 
+  // Reselect: expeditions
   const {expeditions} = useSelector((state) => state.expedition);
 
   return (

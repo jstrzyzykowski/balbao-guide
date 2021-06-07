@@ -1,16 +1,16 @@
 import React from 'react';
-import PageHeader from '../../components/page-header/page-header.component';
+import { useSelector } from 'react-redux';
 
 import {headersData} from '../../api/headersData';
+import PageHeader from '../../components/page-header/page-header.component';
 import HceList from '../../components/hce-list/hce-list.component';
 
 import './hce.styles.scss';
 
-
-
 export default function HcePage() {
 
-  const {title, description} = headersData['hce']; 
+  const {pageHeaders} = useSelector((state) => state.pageHeader);
+  const {title, description} = pageHeaders['hce'];
 
   return (
     <div className='hce'>

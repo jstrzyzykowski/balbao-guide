@@ -11,6 +11,8 @@ export default function HceItem({expeditionData}) {
   const match = useRouteMatch();
   const {title, difficulty, uniqueName} = expeditionData;
 
+  const MAX_DIFFICULTY = 5;
+
   return (
     <div className='hce-item'>
       <div className='hce-item-image-container'>
@@ -20,7 +22,7 @@ export default function HceItem({expeditionData}) {
         <h2 className='title'>{title}</h2>
         <p className='difficulty'>
           <i className="fas fa-skull"></i>
-          <span>{difficulty}/5</span>
+          <span>{difficulty}/{MAX_DIFFICULTY}</span>
         </p>
       </div>
       <CustomButton onClick={() => history.push(`${match.path}/${uniqueName}`)}>

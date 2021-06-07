@@ -6,6 +6,7 @@ import './form.styles.scss';
 
 export default function Form() {
 
+  // Reimplement logic
   const [loginFormActive, setLoginFormActive] = useState(true);
   const [registerFormActive, setRegisterFormActive] = useState(false);
 
