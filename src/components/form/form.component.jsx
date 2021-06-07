@@ -1,34 +1,26 @@
-import React, { useState } from 'react'
+import React from 'react'
+
+import { useSelector, useDispatch } from 'react-redux';
+import {setSignInActive, setSignUpActive} from '../../redux/landing-form/landing-form.actions';
+
 import FormSignIn from '../form-sign-in/form-sign-in.component';
 import FormSignUp from '../form-sign-up/form-sign-up.component';
 
 import './form.styles.scss';
 
 export default function Form() {
-
   // Reimplement logic
-  const [loginFormActive, setLoginFormActive] = useState(true);
-  const [registerFormActive, setRegisterFormActive] = useState(false);
-
-  const handleClickLogin = () => {
-    setLoginFormActive(true);
-    setRegisterFormActive(false)
-  }
-
-  const handleClickRegister = () => {
-    setLoginFormActive(false);
-    setRegisterFormActive(true)
-  }
+  const {signIn, signUp} = useSelector((state) => state.landingForm.formPages);
+  const dispatch = useDispatch();
 
   return (
     <div className='form'>
       <div className='form-switch'>
-        <button className={`${loginFormActive ? 'active' : ''} switch-login`} onClick={handleClickLogin}>Login</button>
-        <button className={`${registerFormActive ? 'active' : ''} switch-register`} onClick={handleClickRegister}>Register</button>
+        <button className={`${signIn ? 'active' : ''} switch-login`} onClick={() => dispatch(setSignInActive())}>Login</button>
+        <button className={`${signUp ? 'active' : ''} switch-register`} onClick={() => dispatch(setSignUpActive())}>Register</button>
       </div>
       <div className='form-container'>
-        {loginFormActive && <FormSignIn/>}
-        {registerFormActive && <FormSignUp/>}
+        {signIn ? <FormSignIn/> : <FormSignUp/>}
       </div>
     </div>
   );
