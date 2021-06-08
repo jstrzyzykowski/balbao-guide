@@ -1,5 +1,25 @@
 .section-title {
-  font-size: 1.125rem;
-  margin: 20px 0 10px;
-  color: #2F2F2F;
+  display: flex;
+  align-items: center;
+  // background-color: yellowgreen;
+  margin: 20px 0;
+  padding: 0 10px;
+
+  .line {
+    height: 2px;
+    flex-grow: 1;
+    background-color: rgb(226, 226, 226);
+  }
+
+  .title {
+    font-size: 1.125rem;
+    // color: #2F2F2F;
+    color: rgb(180, 180, 180);
+    // background-color: yellow;
+    padding: 0 10px;
+  }
+
 }
+
+
+

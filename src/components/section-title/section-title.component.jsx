@@ -4,6 +4,10 @@ import './section-title.styles.scss';
 
 export default function SectionTitle({content}) {
   return (
-    <h2 className='section-title'>{content}</h2>
+    <div className='section-title'>
+      <div className='line'/>
+        <h2 className='title'>{content}</h2>
+      <div className='line'/>
+    </div>
   );
 }

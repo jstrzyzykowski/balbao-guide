@@ -5,6 +5,7 @@ export const expeditionsData = [
     uniqueName: 'lurking-underneath',
     difficulty: '3',
     mobType: 'Undead',
+    loadingPhotoURL: 'https://i.ibb.co/8Bx6bPQ/hce-image.png',
     enemies: [
       {
         id: '100',

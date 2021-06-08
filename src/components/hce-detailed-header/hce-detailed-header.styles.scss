@@ -24,7 +24,7 @@
       height: 100%;
       object-fit: cover;
       object-position: top;
-      opacity: 0.85;
+      opacity: 0.75;
     }
   }
 
@@ -35,10 +35,9 @@
     padding: 10px;
 
     .text-title {
-      font-size: 1.2rem;
+      font-size: 1.125rem;
       font-weight: bold;
       text-align: left;
-      // text-transform: uppercase;
       color: #2F2F2F;
     }
 
@@ -46,12 +45,11 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       align-items: center;
       margin-top: 4px;
 
       .monster-type {
-        // flex-grow: 1;
         padding: 4px 8px;
         background-color: rgb(219, 219, 219);
         color: dimgray;

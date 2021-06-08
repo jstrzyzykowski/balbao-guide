@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import {headersData} from '../../api/headersData';
 import PageHeader from '../../components/page-header/page-header.component';
 import HceList from '../../components/hce-list/hce-list.component';
 

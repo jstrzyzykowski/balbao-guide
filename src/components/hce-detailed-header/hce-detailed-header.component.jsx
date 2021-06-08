@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router';
 
-import Image from '../../assets/hce-image.png';
+// import Image from '../../assets/hce-image.png';
 import CustomButton from '../custom-button/custom-button.component';
 
 import './hce-detailed-header.styles.scss';
@@ -9,7 +9,7 @@ import './hce-detailed-header.styles.scss';
 export default function HceDetailedHeader({expedition}) {
   
   const history = useHistory();
-  const {title, difficulty, mobType} = expedition;
+  const {title, difficulty, mobType, loadingPhotoURL} = expedition;
   
   const MAX_DIFFICULTY = 5;
 
@@ -19,7 +19,7 @@ export default function HceDetailedHeader({expedition}) {
       <i className="fas fa-backward"></i>
       </CustomButton>
       <div className="header-image-container">
-        <img src={Image} alt="" />
+        <img src={loadingPhotoURL} alt="" />
       </div>
       <div className="header-text">
         <h2 className="text-title">{title}</h2>
