@@ -1,6 +1,6 @@
 # Balbao - private HCE navigator
 
-![](/project-showcase.png)
+![](/src/assets/project-showcase/project-showcase.png)
 
 ## 🚨 [WIP] ToDo
 - [ ] Prepare images for HCE [Banners, Maps, Enemies]
